@@ -8,7 +8,7 @@ class Lote extends HiveObject {
   String id;
   
   @HiveField(1)
-  String produtoId;
+  String codigoBarras; // Mudamos aqui! Agora o lote se vincula ao código de barras direto.
   
   @HiveField(2)
   int quantidade;
@@ -21,7 +21,7 @@ class Lote extends HiveObject {
 
   Lote({
     required this.id,
-    required this.produtoId,
+    required this.codigoBarras,
     required this.quantidade,
     required this.dataValidade,
     this.status = 'Fechado',
